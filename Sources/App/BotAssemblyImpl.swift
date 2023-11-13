@@ -8,12 +8,6 @@ public final class BotAssemblyImpl: BotAssembly {
     public private(set) lazy var commandsHandlers: [CommandHandler] = [
 
         CommandHandler(
-            command: Command(value: "/cancel"),
-            description: "Cancel current operation",
-            flowAssembly: CancelOperationFlowAssembly()
-        ),
-
-        CommandHandler(
             command: Command(value: "/revert"),
             description: "Revert string",
             flowAssembly: RevertOperationFlowAssembly()
