@@ -13,7 +13,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent.git", from: "4.8.0"),
         // 🪶 Fluent driver for SQLite.
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
-        .package(url: "https://github.com/dmoroz0v/ChatBotSDK.git", from: "0.1.0"),
+        .package(url: "https://github.com/dmoroz0v/ChatBotSDK.git", from: "0.1.1"),
     ],
     targets: [
         .executableTarget(

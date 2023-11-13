@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dmoroz0v/ChatBotSDK.git",
       "state" : {
-        "revision" : "a7bcd6176742b3c6883d7def45ba83f5a508def8",
-        "version" : "0.1.0"
+        "revision" : "b2763b636aeb430a62bc5c2432891b462ef3b5db",
+        "version" : "0.1.1"
       }
     },
     {
