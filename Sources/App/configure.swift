@@ -23,18 +23,18 @@ public func configure(_ app: Application, bot: TgBotSDK.Bot) async throws {
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     ContentConfiguration.global.use(decoder: decoder, for: .json)
 
-    //app.http.server.configuration.hostname = "..."
-    //app.http.server.configuration.port = ...
+    app.http.server.configuration.hostname = ""
+    app.http.server.configuration.port = 8443
 
-    //try app.http.server.configuration.tlsConfiguration = .forServer(
-    //    certificateChain: [
-    //        .certificate(.init(
-    //            file: "cert.pem",
-    //            format: .pem
-    //        ))
-    //    ],
-    //    privateKey: .file("key.pem")
-    //)
+    try app.http.server.configuration.tlsConfiguration = .makeServerConfiguration(
+        certificateChain: [
+            .certificate(.init(
+                file: "Cert/cert.pem",
+                format: .pem
+            ))
+        ],
+        privateKey: .file("Cert/key.pem")
+    )
 
     // register routes
     try routes(app, bot: bot)
